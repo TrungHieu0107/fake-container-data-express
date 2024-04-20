@@ -26,6 +26,8 @@ dotenv.config()
 const app: Application = express()
 const port = process.env.PORT || 8000
 
+app.use(express.static('public'))
+
 app.get('/', (req: Request, res: Response) => {
 	res.send('Welcome to Express & TypeScript Server')
 })
